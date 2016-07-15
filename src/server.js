@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import Koa from 'koa';
-import cors from 'koa-cors';
+import cors from 'kcors';
 import api from './api';
 
 // Load env variables ASAP
