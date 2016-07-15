@@ -9,15 +9,19 @@ dogsRouter
   .post('/', post);
 
 async function get(ctx, next) {
-  ctx.body = 'Dogs';
+  const dogs = db.get('dogs');
+  ctx.body = await dogs.find();
 }
 
 async function post(ctx, next) {
-  ctx.body = 'Dogs';
+  const params = ctx.request.body;
 
-  // const dogs = db.get('dogs');
-  // const insert = dogs.insert({ dog: 'cao' });
+  const dogs = db.get('dogs');
+  const insert = dogs.insert(params);
+
+  ctx.body = {
+    payload: params
+  }
 }
-
 
 export default dogsRouter;
