@@ -451,3 +451,7 @@ p a:hover {
   border-shadow: 1px 2px 2px #EEE;
   object-fit: cover;
 }
+
+.bottom-view-div {
+  background-color: blue;
+}
