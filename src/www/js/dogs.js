@@ -7,9 +7,6 @@ $(document).ready(function() {
   });
 });
 
-function endlessScroll() {
-  }
-
 function addDog(dog) {
   var $dogscontainer = $('#dogscontainer');
   var $dog = $('<div>', {

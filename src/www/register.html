@@ -5,8 +5,18 @@
 	<meta charset="UTF-8">
 	<title>Animais em Abrigos</title>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link href="plugins/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link type="text/css" href="plugins/bootstrap.min.css" rel="Stylesheet" />
+
+
+<!--  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+-->
+    <script src="plugins/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="plugins/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="js/register.js" ></script>
+
 </head>
 <body>
 	<div id="header">
@@ -26,36 +36,91 @@
 		</div>
 	</div>
 	<div id="body">
-		<div style="display:inline-block; width:10%; height=5%; padding-left:2%; padding-top:0%;">
-			<img src="images/zuca.jpg" width="400" height="400"/>
-		</div>
-		<div style="padding-left:25%; display:inline-block; width:40%;">
-			<form style="color: #000000;">
-				Espécie:<br>
-  				<input type="text" name="animal"><br><br>
-  				Nome do Animal:<br>
-  				<input type="text" name="name"><br><br>
-  				Raça:<br>
-  				<input type="text" name="breed"><br><br>
-  				Castrado (Responda sim ou não):<br>
-  				<input type="text" name="castrated"><br><br>
-  				Cor:<br>
-  				<input type="text" name="color"><br><br>
-  				Data de Nascimento (Aproximada):<br>
-  				<input type="text" name="dateBirth"><br><br>
-  				Vermifugação (Data da última vermifugação - vazio caso não exista):<br>
-  				<input type="text" name="dewormed"><br><br>
-  				Descrição:<br>
-  				<input type="text" name="description"><br><br>
-  				Informações Extras:<br>
-  				<input type="text" name="extra"><br><br>
-  				Localização (Onde o animal se encontra):<br>
-  				<input type="text" name="location"><br><br>
-
-  				<input type="submit" name="save" value="Salvar" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px;
-    																   text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">
-			</form>
-		</div>
+    <div id="background">
+      <div id="mainContent">
+		    <!-- <div style="">
+			    <img src="images/zuca.jpg" width="400" height="400"/>
+		    </div>-->
+		    <div class="formContainer">
+			    <form action="#" id="animalForm">
+            <div class="row">
+              <div class="col-sm-6">
+                <img id="photoPreview" src="#"  alt="Seu animal"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <label for="photo">Foto</label>
+                <input type="file" class="form-control item" id="photo" data-field="photo" required>
+              </div>
+              <div class="col-sm-4">
+                <label for="aminal">Espécie</label>
+                <input type="text" class="form-control item" id="animal" name="animal" data-field="animal" required>
+                </input>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <label for="name">Nome</label>
+                <input type="text" value='' class="form-control item" id="name" data-field="name" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <label for="breed">Raça</label>
+                <input type="text" class="form-control item" id="breed" data-field="breed" requires>
+              </div>
+              <div class="col-sm-2">
+                <label for="castrated">Castrado</label>
+                <select class="form-control item" id="castrated" name="castrated" data-field="castrated" required>
+                  <option value="true">Sim</option>
+                  <option value="false">Não</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="color">Cor</label>
+                <input type="text" class="form-control item" id="color" name="color" data-field="color" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <label for="dateBirth">Data de Nascimento <i class="fa fa-question-circle" aria-hidden="true" title="Aproximadamente"></i></label>
+                <input type="month" class="form-control item" name="dateBirth" id="dateBirth" data-field="dateBirth" required>
+              </div>
+              <div class="col-sm-3">
+                <label for="dewormed">última vermifugação <i class="fa fa-question-circle" aria-hidden="true" title="Data da última vermifugação. Deixe vazio caso não exista."></i></label>
+                <input type="date" class="form-control item" name="dewormed" id="dewormed" data-field="dewormed" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="description">Descrição</label>
+  				      <textarea maxlength="250" type="text" class="form-control item" name="description" id="description" data-field="description"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="description">Informações Extras</label>
+  				      <textarea maxlength="250" type="text" class="form-control item" name="extra" id="extra" data-field="extra"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="description">Localização <i class="fa fa-question-circle" aria-hidden="true" title="Local atual onde o Animal se encontra."></i></label>
+                <input type="text" class="form-control item" id="location" name="location" data-field="location" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button class="btn btn-success" type="submit" form="animalForm"><i class="fa fa-print" aria-hidden="true"></i> Salvar</button>
+              </div>
+            </div>
+			    </form>
+		    </div>
+      </div>
+    </div>
 	</div>
 	<div id="footer">
 		<ul>
