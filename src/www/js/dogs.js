@@ -1,16 +1,14 @@
 $(document).ready(function() {
   getDogs();
-  var infinite = new Waypoint({
-    element: $('.bottom-view-div')[0],
-    handler: (direction) => {
-      if(direction == 'down'){
-        getEndDogs();
-      }
-    },
-    offset: -250
+  $(window).scroll(() => {
+    if($(window).scrollTop() + $(window).height() == $(document).height()){
+      getEndDogs();
+    }
   });
 });
 
+function endlessScroll() {
+  }
 
 function addDog(dog) {
   var $dogscontainer = $('#dogscontainer');
