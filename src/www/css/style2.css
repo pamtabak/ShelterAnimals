@@ -428,7 +428,7 @@ p a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .dog h1 {
@@ -484,4 +484,12 @@ p a:hover {
 #photoPreview {
   display: none;
   width: 200px;
+}
+
+.modal-header {
+    border: 0px;
+}
+
+.modal {
+    text-align: center;
 }

@@ -62,13 +62,13 @@
             <div class="row">
               <div class="col-sm-4">
                 <label for="name">Nome</label>
-                <input type="text" value='' class="form-control item" id="name" data-field="name" required>
+                <input type="text" value='' class="form-control item" id="name" name="name" data-field="name" required>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-4">
                 <label for="breed">Raça</label>
-                <input type="text" class="form-control item" id="breed" data-field="breed" requires>
+                <input type="text" class="form-control item" id="breed" data-field="breed" required>
               </div>
               <div class="col-sm-2">
                 <label for="castrated">Castrado</label>
@@ -91,13 +91,13 @@
               </div>
               <div class="col-sm-3">
                 <label for="dewormed">última vermifugação <i class="fa fa-question-circle" aria-hidden="true" title="Data da última vermifugação. Deixe vazio caso não exista."></i></label>
-                <input type="date" class="form-control item" name="dewormed" id="dewormed" data-field="dewormed" required>
+                <input type="date" class="form-control item" name="dewormed" id="dewormed" data-field="dewormed" >
               </div>
             </div>
             <div class="row">
               <div class="col-sm-6">
                 <label for="description">Descrição</label>
-  				      <textarea maxlength="250" type="text" class="form-control item" name="description" id="description" data-field="description"></textarea>
+  				      <textarea maxlength="250" type="text" class="form-control item" name="description" id="description" data-field="description" required></textarea>
               </div>
             </div>
             <div class="row">
@@ -142,5 +142,23 @@
 			<a href="https://twitter.com/osindefesos" target="_blank" id="twitter">Twitter</a>
 		</div>
 	</div>
+  <div class="modal fade successModal" tabindex="-1" role="dialog" aria-labelledby="successLabel" 　aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3 class="modal-title" id="successLabel">Esta transportadora já foi removida.</h3>
+        </div>
+        <div class="modal-body">
+          Uma transportadora removida não pode ser removida.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="successButton btn btn-success" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
