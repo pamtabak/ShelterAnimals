@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "sim",
+	color :  "branca",
+	dateBirth : 01/08/2014,
+	dewormed : 01/03/2016,
+	description : "Macho, lindo, carinhoso demais, muitolindo mesmo, ótimo para quem tem crianças. Porte médio.",
+	extra: "Não se dá bem com outros cachorros, precisa ser filho único.",
+	image: "dread.jpeg",
+	location: "Hospedagem P",
+	name: "Dread"
+}

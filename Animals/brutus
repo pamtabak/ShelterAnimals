@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "sim",
+	color :  "preto",
+	dateBirth : 01/08/2014,
+	dewormed : 01/03/2016,
+	description : "Macho. Uma mistura de rottweiler com dachshund, muito engraçado e fofo!",
+	extra: "Ideal para locais grandes, pois tem muita energia.",
+	image: "brutus.jpeg",
+	location: "Abrigo Público",
+	name: "Brutus"
+}

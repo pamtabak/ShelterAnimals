@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "não",
+	color :  "marrom (bege)",
+	dateBirth : 01/06/2016,
+	dewormed : 01/07/2016,
+	description : "3 filhotes machos",
+	extra: "Mãe é porte médio.",
+	image: "filhotes.jpeg",
+	location: "Hospedagem K",
+	name: "Filhotes"
+}

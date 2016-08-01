@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "sim",
+	color :  "marrom (caramelo)",
+	dateBirth : 01/08/2014,
+	dewormed : 01/03/2016,
+	description : "Fêmea. Encontrada aos arredores do parque olímpico",
+	extra: "Muito amorosa e protetora.",
+	image: "pedrita.jpeg",
+	location: "Hospedagem P",
+	name: "Doce"
+}

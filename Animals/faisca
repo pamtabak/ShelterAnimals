@@ -1,0 +1,13 @@
+{
+	animal: "gato",
+	breed : "srd",
+	castrated : "não",
+	color :  "amarelo alaranjado",
+	dateBirth : 01/01/2016,
+	dewormed : null,
+	description : "Macho, carinhoso, macio, muito amoroso, castrado",
+	extra: "Ama brincar",
+	image: "faisca.jpeg",
+	location: "Lar Temporário Claudia",
+	name: "Faísca"
+}

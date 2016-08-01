@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "sim",
+	color :  "marrom",
+	dateBirth : 01/08/2014,
+	dewormed : 01/03/2016,
+	description : "Fêmea. Encontrada aos arredores do parque olímpico",
+	extra: "",
+	image: "pedrita.jpeg",
+	location: "Hospedagem P",
+	name: "Pedrita"
+}

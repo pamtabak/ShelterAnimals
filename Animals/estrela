@@ -1,0 +1,13 @@
+{
+	animal: "cachorro",
+	breed : "srd",
+	castrated : "sim",
+	color :  "branca",
+	dateBirth : 01/08/2015,
+	dewormed : 01/03/2016,
+	description : "Fêmea.Foi abandonada no abrigo público e infelizmente não foi adotada na última feira de adoção.",
+	extra: "Muito amorosa e protetora.",
+	image: "estrela.jpeg",
+	location: "Hospedagem K",
+	name: "Estrela"
+}
