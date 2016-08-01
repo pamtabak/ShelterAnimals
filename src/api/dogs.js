@@ -57,9 +57,27 @@ async function getOne(ctx, next) {
 }
 
 async function savePhoto(ctx, next) {
-  const params = ctx.request.body;
-  console.log(params);
-  ctx.body = params;
+  const {files, fields} = await asyncBusboy(ctx.req);
+  console.log(JSON.parse(fields.data));
+  let newData = JSON.parse(fields.data);
+  let extension = path.extname(files[0].filename);
+  let fileName = newData._id + extension;
+  let tmpPath = path.join(os.tmpdir(), fileName);
+  let savedPath = path.join(__dirname, '/../www/tmp/' + fileName);
+  let stream = await fs.createWriteStream(tmpPath);
+  files[0].pipe(stream);
+  fse.move(tmpPath, savedPath, async function(err) {
+    if (err) return err;
+    const animals = db.get('dogs');
+    let id = monk.id(newData._id);
+    newData.image = '/tmp/' + fileName;
+    console.log(newData);
+    delete newData._id;
+    let x = await animals.findOneAndUpdate({_id: id}, newData);
+    ctx.body = x;
+    return x;
+  });
+
 }
 
 export default dogsRouter;
