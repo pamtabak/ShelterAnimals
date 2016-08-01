@@ -23,7 +23,7 @@ function addDog(dog) {
 }
 
 function getDogs() {
-  $.get('/api/dogs/', (data) => {
+  $.get('/api/dogs/4', (data) => {
     data.forEach((dog) => addDog(dog));
   });
 }

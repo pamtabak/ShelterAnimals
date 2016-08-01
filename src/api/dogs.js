@@ -1,18 +1,26 @@
 import router from 'koa-router';
 import monk from 'monk';
 import db from '../db';
+import parse from 'co-busboy';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 
 const dogsRouter = router();
 
 dogsRouter
   .prefix('/dogs')
-  .get('/', get)
+  .get('/:size', get)
+  .get('/:_id', getOne)
   .get('/:last/:size', loadFeed)
+  .put('/photo', savePhoto)
   .post('/', post);
 
 async function get(ctx, next) {
   const dogs = db.get('dogs');
-  ctx.body = await dogs.find({}, {limit: 4, sort: {_id: 1}});
+  let params = ctx.params;
+  let size = parseInt(params.size);
+  ctx.body = await dogs.find({}, {limit: size, sort: {_id: 1}});
 }
 
 async function post(ctx, next) {
@@ -37,6 +45,20 @@ async function loadFeed(ctx, next) {
       {_id: {$gt: id}},
       {limit: size, sort: {_id: 1}}
     );
+}
+
+async function getOne(ctx, next) {
+  let params = ctx.params;
+  let _id = params._id;
+  const animals = db.get('dogs');
+   _id = monk.id(_id);
+  ctx.body = await animals.findOne({_id: _id});
+}
+
+async function savePhoto(ctx, next) {
+  const params = ctx.request.body;
+  console.log(params);
+  ctx.body = params;
 }
 
 export default dogsRouter;
