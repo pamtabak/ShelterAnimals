@@ -14,13 +14,10 @@ $(document).ready(() => {
 function readURL(input){
   if(input.files && input.files[0]){
     var reader =  new FileReader();
-
     reader.onload = function(e){
       $('#photoPreview').attr('src', e.target.result)
         .show();
-
     };
-
     reader.readAsDataURL(input.files[0]);
   }
 }
@@ -57,13 +54,14 @@ function uploadPhoto(data) {
   $.each($('#photo')[0].files, (i,file) => {
     fileUpload.append('file-' + i, file);
   });
+  fileUpload.append('data',JSON.stringify(data.payload));
   var json = {
-    _id: _id,
+    data: data.payload,
     file : fileUpload
   };
   $.ajax({
     url: 'api/dogs/photo',
-    data: json,
+    data: fileUpload,
     cache: false,
     contentType: false,
     processData: false,
