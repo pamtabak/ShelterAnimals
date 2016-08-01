@@ -1,17 +1,18 @@
 import router from 'koa-router';
 import monk from 'monk';
 import db from '../db';
-import parse from 'co-busboy';
+import asyncBusboy from 'async-busboy';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import fse from 'fs-extra';
 
 const dogsRouter = router();
 
 dogsRouter
   .prefix('/dogs')
   .get('/:size', get)
-  .get('/:_id', getOne)
+  .get('/one/:_id', getOne)
   .get('/:last/:size', loadFeed)
   .put('/photo', savePhoto)
   .post('/', post);
