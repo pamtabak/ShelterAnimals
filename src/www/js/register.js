@@ -40,7 +40,7 @@ function sendData(e, $form, callback) {
         console.log(error);
       } else {
         $('.successModal .modal-title').text('Sucesso !');
-        $('.successModal .modal-body').text('A transportadora foi registrada com sucesso !');
+        $('.successModal .modal-body').text('O animal foi registrada com sucesso !');
         $('.successModal').modal();
         callback(data);
       }
