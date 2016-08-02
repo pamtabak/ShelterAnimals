@@ -18,8 +18,12 @@ function addDog(dog) {
     src : dog.image
   });
   var $imageDiv  = $('<div>', {class: 'img'});
-  $dog.append($title).append($imageDiv.append($img));
+  $dog.append($title).append($img).on('click', (event) => clickDogs($dog, event));
+  var $dogContent = $('<div>', {
+    class: 'dogContent'
+  });
   $dogscontainer.append($dog);
+ // $dogscontainer.append($dogContent);
 }
 
 function getDogs() {
