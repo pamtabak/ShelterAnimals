@@ -98,7 +98,7 @@ img {
 	width: auto;
 }
 #body div#background div {
-	margin: 0 auto;
+	// margin: 0 auto;
 }
 
 /* #body div#background div div { */
@@ -459,14 +459,14 @@ p a:hover {
     height: 85vh;
     padding: 15px;
     padding-top: 50px;
-    display: flex;
-    align-items: center;
-    align-content: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* align-content: center; */
 }
 
 .formContainer {
-  width: 80%;
-  padding: 10px 10px 20px 10px !important;
+  /* width: 80%; */
+  /* padding: 10px 10px 20px 10px !important; */
 }
 
 .fa-question-circle:hover {
@@ -482,7 +482,6 @@ p a:hover {
 }
 
 #photoPreview {
-  display: none;
   width: 200px;
 }
 
@@ -493,3 +492,4 @@ p a:hover {
 .modal {
     text-align: center;
 }
+

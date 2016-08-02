@@ -44,33 +44,39 @@
 		    <div class="formContainer">
 			    <form action="#" id="animalForm">
             <div class="row">
-              <div class="col-sm-6">
-                <img id="photoPreview" src="#"  alt="Seu animal"/>
+              <div class="col-sm-3 col-sm-offset-2">
+                <label for="photoPreview">Foto</label>
+                <div clas="row">
+                <img id="photoPreview" name="photoPreview" src="/tmp/placeholder.jpeg"  alt="Seu animal"/>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="name">Nome</label>
+                    <input type="text" value='' class="form-control item" id="name" name="name" data-field="name" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="photo">Selecionar Foto</label>
+                    <input type="file" class="form-control item" id="photo" data-field="photo" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="aminal">Espécie</label>
+                    <input type="text" class="form-control item" id="animal" name="animal" data-field="animal" required></input>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-2">
-                <label for="photo">Foto</label>
-                <input type="file" class="form-control item" id="photo" data-field="photo" required>
-              </div>
-              <div class="col-sm-4">
-                <label for="aminal">Espécie</label>
-                <input type="text" class="form-control item" id="animal" name="animal" data-field="animal" required>
-                </input>
-              </div>
             </div>
             <div class="row">
-              <div class="col-sm-4">
-                <label for="name">Nome</label>
-                <input type="text" value='' class="form-control item" id="name" name="name" data-field="name" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-4 col-sm-offset-2">
                 <label for="breed">Raça</label>
                 <input type="text" class="form-control item" id="breed" data-field="breed" required>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-3">
                 <label for="castrated">Castrado</label>
                 <select class="form-control item" id="castrated" name="castrated" data-field="castrated" required>
                   <option value="true">Sim</option>
@@ -79,41 +85,41 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-7 col-sm-offset-2">
                 <label for="color">Cor</label>
                 <input type="text" class="form-control item" id="color" name="color" data-field="color" required>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-sm-3 col-sm-offset-2">
                 <label for="dateBirth">Data de Nascimento <i class="fa fa-question-circle" aria-hidden="true" title="Aproximadamente"></i></label>
                 <input type="month" class="form-control item" name="dateBirth" id="dateBirth" data-field="dateBirth" required>
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                 <label for="dewormed">Última vermifugação <i class="fa fa-question-circle" aria-hidden="true" title="Data da última vermifugação. Deixe vazio caso não exista."></i></label>
                 <input type="date" class="form-control item" name="dewormed" id="dewormed" data-field="dewormed" >
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-7 col-sm-offset-2">
                 <label for="description">Descrição</label>
   				      <textarea maxlength="250" type="text" class="form-control item" name="description" id="description" data-field="description" required></textarea>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-7 col-sm-offset-2">
                 <label for="description">Informações Extras</label>
   				      <textarea maxlength="250" type="text" class="form-control item" name="extra" id="extra" data-field="extra"></textarea>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-7 col-sm-offset-2">
                 <label for="description">Localização <i class="fa fa-question-circle" aria-hidden="true" title="Local atual onde o Animal se encontra."></i></label>
                 <input type="text" class="form-control item" id="location" name="location" data-field="location" required>
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-7 col-sm-offset-2">
                 <button class="btn btn-success" type="submit" form="animalForm"><i class="fa fa-print" aria-hidden="true"></i> Salvar</button>
               </div>
             </div>
