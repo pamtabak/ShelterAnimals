@@ -41,3 +41,27 @@ function getEndDogs() {
     data.forEach( (dog) => addDog(dog));
   });
 }
+
+
+function clickDogs($dog, e) {
+  console.log($dog);
+  var data = $dog.data();
+  $.get('/api/dogs/one/' + data.id, (data) => {
+    insertModal(data);
+  });
+}
+
+
+function insertModal(data) {
+  $modal = $('.successModal');
+  $modal.find('.modal-title').text(data.name);
+  $modal.find('.modal-img').attr('src', data.image);
+  $modalText = $modal.find('.modal-text');
+  console.log($modalText);
+  $.each($modalText.find('.modal-field'), (i, element) => {
+    var field = $(element).data().field;
+    var value = data[field];
+    $(element).find('.value').text(value);
+  });
+  $('.successModal').modal();
+}
