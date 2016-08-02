@@ -48,6 +48,9 @@ img {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #header div ul li {
 	float: left;
@@ -98,10 +101,10 @@ img {
 	padding: 0;
 	width: auto;
 }
-#body div#background div {
-	/* margin: 0 auto; */
-	/* overflow: hidden; */
-	/* padding: 55px 0 80px; */
+#body div#background .about {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 55px 0 80px;
 	//min-width: 940px;
 }
 
@@ -445,9 +448,31 @@ p a:hover {
 }
 
 .dog .img {
-  display: flex;
-  justify-content: center;
+  width: inherit;
+  height: inherit;
+  max-width: 400px;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
 
+.dog .description {
+  padding: 10px 10px;
+  /* border-top: 2px solid whitesmoke; */
+  /* margin-top: 10px; */ 
+}
+
+.dog .dog-title {
+  padding: 0px 10px;
+  margin-top: 10px;
+  /* border-top: 2px solid whitesmoke; */
+  padding-top: 5px;
+  margin-bottom: 10px;
+  color: #eeb58c; 
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  font-size: 20px;
 }
 
 .dog img {
@@ -478,14 +503,33 @@ p a:hover {
 .dog {
   background-color: white;
   margin: 1em;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 510px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
   flex-direction: column;
   padding-bottom: 2em;
   cursor: pointer;
+  box-shadow: 4px 5px 10px #dad9d9;
+}
+
+.cachorro {
+	background: url(../images/dog-icon.png);
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.gato {
+	background: url(../images/cat-icon.png);
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  background-size: cover;
+  opacity: 0.3;
 }
 
 .modal-dialog {
@@ -510,7 +554,6 @@ p a:hover {
   object-fit: cover;
 
 }
-
 .modal-text {
   width: 100%;
   align-self: flex-start;

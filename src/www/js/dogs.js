@@ -13,17 +13,24 @@ function addDog(dog) {
     class: "dog",
     'data-id': dog._id
   });
-  var $title = $('<h1>').html(dog.name);
+  var $animalType = $('<div>', {class: 'animal-type'});
+  if(dog.animal == 'Cachorro'){
+    $animalType.addClass('cachorro');
+  } else {
+    $animalType.addClass('gato');
+  }
+  var $animalName = $('<div>', {class: 'animal-title'}).html(dog.name);
+  var $title = $('<div>', {class: 'dog-title'}).append($animalType).append($animalName);
   var $img = $('<img>', {
     src : dog.image
   });
-  var $imageDiv  = $('<div>', {class: 'img'});
-  $dog.append($title).append($img).on('click', (event) => clickDogs($dog, event));
+  var $imageDiv  = $('<div>', {class: 'img'}).css('background-image', 'url('+ dog.image + ')');
+  var $description = $('<div>', {class: 'description'}).text(dog.description);
+  $dog.append($imageDiv).append($title).append($description).on('click', (event) => clickDogs($dog, event));
   var $dogContent = $('<div>', {
     class: 'dogContent'
   });
   $dogscontainer.append($dog);
- // $dogscontainer.append($dogContent);
 }
 
 function getDogs() {
