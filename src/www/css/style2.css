@@ -47,6 +47,9 @@ img {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #header div ul li {
 	float: left;
